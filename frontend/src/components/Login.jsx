@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import '../styles/Login.css';
 
 const roles = [
   { id: 'parent', label: 'Parent/Student', color: 'linear-gradient(to right, #7c3aed, #4f46e5)' },
@@ -33,72 +34,40 @@ const Login = () => {
   const selectedRole = roles.find(r => r.id === role);
 
   return (
-    <div style={{
-      width: '50%',
-      backgroundColor: 'white',
-      padding: '48px'
-    }}>
-      <div style={{
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column'
-      }}>
-        <Link to="/" style={{
-          alignSelf: 'flex-start',
-          marginBottom: '32px',
-          textDecoration: 'none',
-          color: 'inherit',
-          display: 'flex',
-          alignItems: 'center'
-        }}>
-          <ArrowLeft style={{ marginRight: '8px', height: '16px', width: '16px' }} /> Back
+    <div className="login-container">
+      <div className="login-card">
+        <Link to="/" className="back-button">
+          <ArrowLeft style={{ marginRight: '8px', height: '16px', width: '16px' }} /> Back to Role Selection
         </Link>
         
-        <div style={{ maxWidth: '400px' }}>
-          <h2 style={{
-            fontSize: '1.875rem',
-            fontWeight: 'bold',
-            marginBottom: '32px',
-            backgroundImage: selectedRole.color,
-            WebkitBackgroundClip: 'text',
-            color: 'transparent'
-          }}>
-            {selectedRole.label} Login
-          </h2>
-          
-          <form style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            {loginFields[role].map((field, index) => (
-              <div key={index} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <label style={{ fontSize: '0.875rem', fontWeight: '500', color: '#334155' }}>{field.label}</label>
-                <input
-                  type={field.type}
-                  placeholder={field.placeholder}
-                  style={{
-                    width: '100%',
-                    padding: '8px',
-                    backgroundColor: '#f8fafc',
-                    border: '1px solid #e2e8f0',
-                    borderRadius: '4px'
-                  }}
-                />
-              </div>
-            ))}
-            <button 
-              style={{
-                width: '100%',
-                padding: '12px',
-                border: 'none',
-                borderRadius: '4px',
-                color: 'white',
-                fontWeight: '600',
-                backgroundImage: selectedRole.color,
-                cursor: 'pointer'
-              }}
-            >
-              Login
-            </button>
-          </form>
-        </div>
+        <h2 className="login-title" style={{
+          backgroundImage: selectedRole.color,
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent'
+        }}>
+          {selectedRole.label} Login
+        </h2>
+        
+        <form className="login-form">
+          {loginFields[role].map((field, index) => (
+            <div key={index} className="form-group">
+              <label htmlFor={`field-${index}`}>{field.label}</label>
+              <input
+                id={`field-${index}`}
+                type={field.type}
+                placeholder={field.placeholder}
+              />
+            </div>
+          ))}
+          <button 
+            className="login-button"
+            style={{
+              backgroundImage: selectedRole.color
+            }}
+          >
+            Login
+          </button>
+        </form>
       </div>
     </div>
   );

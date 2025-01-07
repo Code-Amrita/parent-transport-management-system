@@ -4,7 +4,7 @@ import LoginSelection from './LoginSelection';
 
 const PTMS = () => {
   return (
-    <div style={{ minHeight: '100vh', display: 'flex' }}>
+    <div style={{ height: '100vh', display: 'flex' }}>
       <LeftPanel />
       <LoginSelection />
     </div>
