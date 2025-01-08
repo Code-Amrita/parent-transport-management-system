@@ -14,7 +14,7 @@ const LeftPanel = () => {
           className="logo"
         />
         <h1>
-          Welcome to Transport
+          Welcome to Parent Transport
           <br />Management System
         </h1>
         <p>

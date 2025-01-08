@@ -1,31 +1,40 @@
 .left-panel {
-  width: 50%;
+  flex: 1;
+  min-width: 300px;
   background-color: #0f172a;
   color: white;
-  padding: 48px;
+  padding: 32px; /* Increased padding for larger devices */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .left-panel h1 {
-  font-size: 2.25rem;
+  font-size: 2rem; /* Adjusted font size for larger screens */
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .left-panel p {
   color: #94a3b8;
-  font-size: 1.125rem;
+  font-size: 1.125rem; /* Slightly larger text for readability */
 }
 
 .left-panel img.logo {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  width: 180px; /* Increased width for better visibility */
 }
 
-.left-panel img.illustration {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 32px;
-}
+@media (max-width: 768px) {
+  .left-panel {
+    padding: 16px;
+  }
 
+  .left-panel h1 {
+    font-size: 1.5rem;
+  }
+
+  .left-panel img.logo {
+    width: 120px;
+  }
+}
