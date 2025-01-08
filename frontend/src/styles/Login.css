@@ -1,0 +1,125 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height for proper vertical centering */
+  background-color: #f8fafc; /* Light background color for a clean look */
+  padding: 16px; /* Add padding for small screens */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.login-card {
+  background-color: white;
+  padding: 32px; /* Increased padding for better spacing */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for better focus */
+  max-width: 400px; /* Restrict the card's width */
+  width: 100%; /* Make it responsive */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.login-title {
+  font-size: 1.5rem;
+  color: #4f46e5; /* Matching the theme */
+  margin-bottom: 24px;
+  text-align: center; /* Center-align heading */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #334155;
+  margin-bottom: 8px;
+  display: block; /* Ensure proper spacing between label and input */
+}
+
+.form-group input {
+  width: 96%;
+  padding: 12px;
+  border: 1px solid #cbd5e1; /* Light border */
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  border-color: #4f46e5; /* Highlight border on focus */
+  outline: none;
+  box-shadow: 0 0 4px rgba(79, 70, 229, 0.5);
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4f46e5; /* Matching the theme */
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #4338ca; /* Slightly darker shade on hover */
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #4f46e5;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 24px;
+  }
+
+  .form-group input {
+    padding: 10px; /* Reduce padding for inputs */
+    font-size: 0.9rem; /* Smaller font size for inputs */
+    border-radius: 6px; /* Slightly reduce border-radius */
+    width: 96%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 12px; /* Reduce padding for smaller screens */
+  }
+
+  .login-card {
+    padding: 20px; /* Slightly reduce padding */
+    max-width: 96%; /* Reduce max width for small screens */
+  }
+
+  .login-title {
+    font-size: 1.2rem; /* Adjust heading size */
+  }
+
+  .form-group input {
+    font-size: 0.9rem; /* Smaller font size for inputs */
+    border-radius: 6px; /* Slightly reduce border-radius */
+    width: 93%;
+  }
+
+  .login-button {
+    padding: 10px; /* Adjust button padding */
+    font-size: 0.9rem; /* Smaller button text */
+  }
+}
