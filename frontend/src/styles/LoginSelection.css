@@ -1,0 +1,55 @@
+.login-selection {
+  flex: 1;
+  padding: 32px; /* Increased padding for larger devices */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Increased min size for larger screens */
+  gap: 24px; /* Larger gap between cards */
+}
+
+.role-button {
+  padding: 20px; /* Increased padding for better spacing */
+  border-radius: 12px;
+  text-align: center;
+  background-color: #f3f4f6; /* Set background explicitly */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none; /* Remove underline */
+  color: #1d4ed8; /* Ensure the color matches the theme */
+  transition: transform 0.3s;
+}
+
+.role-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.role-title {
+  font-size: 1.25rem; /* Adjusted for larger screens */
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.role-description {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+@media (max-width: 480px) {
+  .role-grid {
+    gap: 16px;
+  }
+
+  .role-button {
+    padding: 16px;
+  }
+
+  .role-title {
+    font-size: 1rem;
+  }
+}
