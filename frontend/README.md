@@ -1,8 +1,16 @@
-# React + Vite
+# Dashboard Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Student/Parent Dashboard
+- Provides access to features like generating entry IDs and viewing visit history.
 
-Currently, two official plugins are available:
+## Warden Dashboard
+- Displays warden-specific functionalities for managing vehicle check-ins and check-outs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Security Dashboard
+- Allows security personnel to validate e-IDs and monitor vehicle entries and exits.
+
+## Layout Updates
+- Each role has a custom layout designed to suit the tasks and functions relevant to the user.
+
+## Responsive Design
+- The homepages and dashboards are responsive, ensuring a smooth user experience across devices.
